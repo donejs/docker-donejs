@@ -5,12 +5,9 @@ FROM node:4.2-slim
 RUN npm install -g npm@2.14
 
 # Set environment variable for donejs version
-# ENV DONEJS_VERSION 0.5
+ENV DONEJS_VERSION 0.5.7
 
-# Stable version
-RUN npm install -g donejs
-
-# Latest version
-# RUN npm install -g donejs@v0.5
+# Install latest version of DoneJS
+RUN npm install -g donejs@v0.5.7
 
 CMD ["donejs"]
